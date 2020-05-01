@@ -982,7 +982,7 @@ static bool
 ExtendTime(void)
 {
 	int max = 0, second = 0;
-	float max_eval, second_eval;
+	float max_eval = 0, second_eval = 0;
 	const int child_num = uct_node[current_root].child_num;
 	const child_node_t *uct_child = uct_node[current_root].child;
 
