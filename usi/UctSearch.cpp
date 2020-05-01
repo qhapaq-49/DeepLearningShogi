@@ -642,12 +642,12 @@ UctSearchGenmove(Position *pos, Move &ponderMove, bool ponder)
 		extend_time &&
 		remaining_time[pos->turn()] > time_limit * 2 &&
 		ExtendTime()) {
-		cout << "ExtendTime\n";
 		po_info.halt = (int)(1.5 * po_info.halt);
 		time_limit *= 2;
 		// 探索スレッド開始
 		for (int i = 0; i < max_gpu; i++)
 			search_groups[i].Run();
+		cout << "ExtendTime\n";
 
 		// 探索スレッド終了待機
 		for (int i = 0; i < max_gpu; i++)
