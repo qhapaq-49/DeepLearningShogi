@@ -647,7 +647,7 @@ UctSearchGenmove(Position *pos, Move &ponderMove, bool ponder)
 		// 探索スレッド開始
 		for (int i = 0; i < max_gpu; i++)
 			search_groups[i].Run();
-		cout << "ExtendTime\n";
+		cout << "ExtendTime" << endl;
 
 		// 探索スレッド終了待機
 		for (int i = 0; i < max_gpu; i++)
