@@ -642,7 +642,7 @@ UctSearchGenmove(Position *pos, Move &ponderMove, bool ponder)
 		extend_time &&
 		remaining_time[pos->turn()] > time_limit * 2 &&
 		ExtendTime()) {
-		po_info.halt = (int)(1.5 * po_info.halt);
+		po_info.halt = (int)(2 * po_info.halt);
 		time_limit *= 2;
 		// 探索スレッド開始
 		for (int i = 0; i < max_gpu; i++)
